@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MOHD FAIZAN - QR Code Generator by </title>
+</head>
+<body>
+    <div class="name-container">
+    </div>
+    <div class="container">
+        <p>Made with <span>&#10084</span> by:</p>
+        <p id="faizan">MOHD FAIZAN</p>
+        <p id="title">QR Code Generator</p>
+        <p id="tag">Enter any text or URL:</p>
+        <input type="text" placeholder="Text or URL" id="qrText">
+        <div class="ImgBox">
+            <img src="" id="QRimg">
+        </div>
+        <button class="btn" onclick="qrGenerator()">Generate QR Code</button>
+    </div>
+
+    <script>
+        // appropriate selector methods like querySelector with a dot for class or a hash for IDs.
+        let ImgBox = document.querySelector(".ImgBox");
+        let QRimg = document.querySelector("#QRimg");
+        let qrText = document.querySelector("#qrText");
+
+        function qrGenerator(){
+            if(qrText.value.length > 0){
+                QRimg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value; 
+                
+                ImgBox.classList.add("showimage");
+            }
+            else{
+                qrText.classList.add("error");
+                setTimeout(()=>{
+                    qrText.classList.remove("error");
+                },1000)
+            }
+        }
+    </script>
+</body>
+</html>

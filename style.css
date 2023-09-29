@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins" , sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #262a2f;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: #fff;
+    border-radius: 10px;
+}
+
+.container p span{
+    color: #ff2963;
+}
+
+#faizan{
+    font-weight: 1000;
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+#title{
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#tag{
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.container input{
+    height: 50px;
+    width: 100%;
+    border: 1px solid #494eea;
+    outline: 0;
+    padding: 10;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    /* caret-color: default; */
+    text-align: center;
+    /* for hover effects */
+    transition: box-shadow 0.3s ease; 
+}
+
+.container input:hover {
+    box-shadow: 0 3px 15px #494eea;
+}
+
+.container input::placeholder {
+    /* text-align: center;  */
+    vertical-align: middle; 
+    /* padding-left: 5%; */
+}
+
+
+.container button{
+    height: 50px;
+    width: 100%;
+    background: #494eea;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-weight: 500;
+    transition: box-shadow 0.3s ease;
+}
+
+.container button:hover {
+    box-shadow: 0 3px 15px rgb(115, 115, 115);
+}
+
+#ImgBox{
+    background-color: red;
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#QRimg{
+    margin-bottom: 10px;
+}
+
+#ImgBox.showimage{
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #d1d1d1;
+}
+
+.error{
+    animation: shake 0.1s linear 5;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-4px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-4px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+#classid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
